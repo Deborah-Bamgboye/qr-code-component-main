@@ -9,13 +9,16 @@ html{
     box-sizing: border-box;
     font-size: 65%;
 }
+:root{
+    --base-color: hsl(212, 45%, 89%);
+}
 
  .attribution { font-size: 11px; text-align: center;  }
 .attribution a { color: hsl(228, 45%, 44%); }
 body{
     display: flex;
     flex-direction: column;
-    background-color: hsl(212, 45%, 89%);
+    background-color: hsl(from var(--base-color) h s l );
     height: 100vh;
     width: 100vw;
     font-size: 1.5rem;
@@ -57,12 +60,12 @@ body{
 .qr-text p{
     width: fit-content;
     font-weight: 400;
-    color:hsl(216, 15%, 48%);
+    color:hsl(from var(--base-color) calc(h + 4) calc(s - 30) calc(l - 41));
     text-align: center;
 }
 .qr-text h3{
     font-weight: 700;
-    color:  hsl(218, 44%, 22%);
+    color: hsl(from var(--base-color) calc(h + 6) calc(s - 1) calc(l - 67));
     text-align: center;
     font-size:2rem;
 }
